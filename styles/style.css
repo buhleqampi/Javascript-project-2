@@ -1,0 +1,117 @@
+*,
+*::after,
+*::before {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+.landing-page {
+    background-image: url("https://i.postimg.cc/wjQFSnRv/Fenty-Beauty-Strategy.png");
+}
+.nav-icons{
+    list-style-type:  none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: inline;
+}
+li{
+    float: left;
+
+} 
+a{
+    padding: 8px;
+    text-decoration: none;
+}
+li a{
+    text-decoration: none;
+    text-align: center;
+    color: darksalmon;
+}
+
+#products{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.table{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.btn {
+    border-radius: 50%;
+
+}
+.text {
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    color:black;
+}
+#sort, #addition {
+    size: 400px;
+}
+main {
+    min-height: 90vh;
+}
+
+.author {
+    color: darksalmon;
+}
+#foto {
+    display:flex;
+    justify-content: flex-end;
+}
+
+#table{
+    padding: 10px;
+}
+.mainevent, .showevent, .middleevent{
+    background-color: darksalmon;
+}
+
+table {
+    border:2px solid;
+    width: 100%;
+}
+th {
+    height:70px;
+}
+table, th, td{
+    border-collapse: collapse;
+}
+
+#checkoutInput {
+    border-radius: 8%;
+    width:80%;
+}
+
+.data-shadow {
+    display: flex;
+    align-items: center;
+    font-size: 200px;
+    margin-bottom: 12px;
+    margin-top: 30px;
+    padding: 90px;
+    opacity: 0.8;
+}
+
+@keyframes text{
+    from {color: black;}
+    to{color: darksalmon;}
+
+}
+
+.data-shadow{
+    width:100%;
+    color: black;
+    animation-name: text;
+    animation-duration: 4s;
+}
+
