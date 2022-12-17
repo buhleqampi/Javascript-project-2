@@ -24,8 +24,14 @@ for(let i =0;i < removeCheckoutItem.length;i++) {
     buttonClicked.parentElement.parentElement.remove()
         console.log('clicked')
     })
+    localStorage.setItem('data', JSON.stringify(checkout))
 }
 
 function updateCheckoutItem(){
-
-}
+    let checkoutItem = document.getElementsByClassName('cart-items')[0]
+    let checkoutRows = checkoutItem.getElementsByClassName('cart-row')
+    for(let i=0; i < checkoutRows.length; i++) {
+        let checkoutRow = checkoutRows[i]
+    }
+    localStorage.setItem('data', JSON.stringify(checkout))
+} 

@@ -103,7 +103,7 @@ function showAdmin() {
         <input type="text" class="form-control md-4" id="productInput"><h5 id="brand" class="modal-title">Brand</h5>
         <input type="text" class="form-control md-4" id="brandInput"><h5 id="price" class="modal-title">Price</h5><input type="text" class="form-control md-4" id="priceInput">
         </form></div>
-        <div class="modal-footer"><button type="button" class="btn btn-primary" id="editInput" >Edit</button>
+        <div class="modal-footer"><button type="button" class="btn btn-primary" id="editInput" onclick="editProduct()" >Edit</button>
         </div></div></div></div>
         <td><button class ="btn btn-dark btn-sm float-center delete" id="deleteInput" onclick="">Delete</button></td>
         </tr>
@@ -136,18 +136,17 @@ function addItem(){
 }
 
 let edit = document.querySelector('#editInput');
-function editItem(){
+function editProduct(item){
     edit.addEventListener('click', (e) =>{
-        let id = document.querySelector('#idInput').value;
-        let product = document.querySelector('#productInput').value;
-        let brand = document.querySelector('#brandInput').value;
-        let price = document.querySelector('#priceInput').value;
-        products.push ({
-            id,
-            product,
-            brand,
-            price
+        this.id = item.id;
+        this.product = document.querySelector('#productInput').value;
+        this.brand = document.querySelector('#brandInput').value;
+        this.price = document.querySelector('#priceInput').value;
+        
+        let Index = products.findIndex((data)=>{
+            return data,id === item.id;
         })
+        
         localStorage.setItem('products', JSON.stringify(products))
         showAdmin() 
     })

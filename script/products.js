@@ -83,16 +83,14 @@ function showProducts() {
     document.querySelector("#products").innerHTML = " ";
     products.forEach((product) => {
         document.querySelector("#products").innerHTML += `
-        <div class="card" style="width: fit-content">
-        <img src="${product.image}" style="width: 300px"/>
+        <div class="card" style="width:200px","height:100px">
+        <img src="${product.image}" style="width:196px"/>
         <h5>${product.product}</h5>
         <div>${product.brand}</div>
         <div>${product.price}</div>
         <button onclick='addToCheckout(${addToCheckout(product.id)})' id = "checkoutInput" class ="btn btn-primary">Add to checkout</button>
-        <a href="admin.html" class="btn btn-primary mb-2 mt-3 w-75 d-flex justify-content-center" id ="button">Go to admin</a>
         </div>
         `
     });
 }
 showProducts();
-
