@@ -27,8 +27,8 @@ for(let i =0;i < removeCheckoutItem.length;i++) {
     localStorage.setItem('data', JSON.stringify(checkout))
 }
 
-function updateCheckoutItem(){
-    let checkoutItem = document.getElementsByClassName('cart-items')[0]
+function updateCheckoutItem(list){
+    let checkoutItem = document.getElementsByClassName('card')[0]
     let checkoutRows = checkoutItem.getElementsByClassName('cart-row')
     for(let i=0; i < checkoutRows.length; i++) {
         let checkoutRow = checkoutRows[i]

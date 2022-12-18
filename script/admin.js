@@ -136,27 +136,37 @@ function addItem(){
 }
 
 let edit = document.querySelector('#editInput');
-function editProduct(item){
+function editProduct(list){
     edit.addEventListener('click', (e) =>{
-        this.id = item.id;
+        this.id = list.id;
         this.product = document.querySelector('#productInput').value;
         this.brand = document.querySelector('#brandInput').value;
         this.price = document.querySelector('#priceInput').value;
         
         let Index = products.findIndex((data)=>{
-            return data,id === item.id;
+            return data,id === list.id;
         })
         
         localStorage.setItem('products', JSON.stringify(products))
         showAdmin() 
     })
-} 
+}  showAdmin();
 
 function deleteItem(e){ 
     let id = document.querySelector('#idInput').value;
     let product = document.querySelector('#productInput').value;
     let brand = document.querySelector('#brandInput').value;
     let price = document.querySelector('#priceInput').value;
+    try {
+        if(deleteItem() == "") throw "empty";
+        if(isNaN(x)) throw "not a number";
+        x = id.value;
+        if(x < 5) throw "too low";
+        if(x > 10) throw "too high";
+        }
+catch(err) {
+message.innerHTML = "Input is " + err;
+}
     let p = e.parentNode.parentNode.rowIndex;
     document.querySelector(".table").deleteRow(p);
     products.pop ({

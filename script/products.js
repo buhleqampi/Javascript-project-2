@@ -79,6 +79,7 @@ JSON.parse(localStorage.getItem('products')) : localStorage.setItem('products', 
         }
 ]));
 
+
 function showProducts() {
     document.querySelector("#products").innerHTML = " ";
     products.forEach((product) => {
